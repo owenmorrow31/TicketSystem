@@ -131,9 +131,9 @@ C:\Users\otm04\RiderProjects\MyFirstAzureFunction\TicketSystem\obj\Debug\net6.0\
 C:\Users\otm04\RiderProjects\MyFirstAzureFunction\TicketSystem\obj\Debug\net6.0\TicketSystem.AssemblyInfoInputs.cache
 C:\Users\otm04\RiderProjects\MyFirstAzureFunction\TicketSystem\obj\Debug\net6.0\TicketSystem.AssemblyInfo.cs
 C:\Users\otm04\RiderProjects\MyFirstAzureFunction\TicketSystem\obj\Debug\net6.0\TicketSystem.csproj.CoreCompileInputs.cache
+C:\Users\otm04\RiderProjects\MyFirstAzureFunction\TicketSystem\obj\Debug\net6.0\TicketSystem.sourcelink.json
 C:\Users\otm04\RiderProjects\MyFirstAzureFunction\TicketSystem\obj\Debug\net6.0\TicketSy.10F559B0.Up2Date
 C:\Users\otm04\RiderProjects\MyFirstAzureFunction\TicketSystem\obj\Debug\net6.0\TicketSystem.dll
 C:\Users\otm04\RiderProjects\MyFirstAzureFunction\TicketSystem\obj\Debug\net6.0\refint\TicketSystem.dll
 C:\Users\otm04\RiderProjects\MyFirstAzureFunction\TicketSystem\obj\Debug\net6.0\TicketSystem.pdb
 C:\Users\otm04\RiderProjects\MyFirstAzureFunction\TicketSystem\obj\Debug\net6.0\ref\TicketSystem.dll
-C:\Users\otm04\RiderProjects\MyFirstAzureFunction\TicketSystem\obj\Debug\net6.0\TicketSystem.sourcelink.json

@@ -10,17 +10,16 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using TicketSystem.Models; // Confirm that this is the correct namespace for the Ticket model
 
-
 public static class PostTicketFunction
 {
     [FunctionName("PostTicket")]
     public static async Task<IActionResult> RunAsync(
         [HttpTrigger(AuthorizationLevel.Function, "post", Route = "tickets")] HttpRequest req,
-        ILogger log,
-        string filePath = null)
+        ILogger log)
     {
         log.LogInformation("Processing a POST request to add a new ticket.");
 
+        // Read the request body
         string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
         Ticket ticket;
         try
@@ -44,15 +43,19 @@ public static class PostTicketFunction
             return new BadRequestObjectResult("Invalid ticket data provided.");
         }
 
-        filePath ??= Path.Combine(Environment.CurrentDirectory, "tickets.json");
+        // Get the file path from environment variables or use a default path.
+        string filePath = Environment.GetEnvironmentVariable("FilePath") 
+                          ?? Path.Combine(Environment.CurrentDirectory, "tickets.json");
         List<Ticket> tickets = new List<Ticket>();
 
+        // Read existing tickets if the file exists.
         if (File.Exists(filePath))
         {
             string existingData = await File.ReadAllTextAsync(filePath);
             tickets = JsonConvert.DeserializeObject<List<Ticket>>(existingData) ?? new List<Ticket>();
         }
 
+        // Add the new ticket to the list and save it back to the JSON file.
         tickets.Add(ticket);
         await File.WriteAllTextAsync(filePath, JsonConvert.SerializeObject(tickets, Formatting.Indented));
 
@@ -60,3 +63,4 @@ public static class PostTicketFunction
         return new OkObjectResult($"Ticket added successfully: {ticket.TicketID}");
     }
 }
+
