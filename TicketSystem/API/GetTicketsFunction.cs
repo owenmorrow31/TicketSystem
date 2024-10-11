@@ -21,8 +21,11 @@ public static class GetTicketsFunction
 
         try
         {
-            // Define the path to the tickets file.
-            string filePath = Path.Combine(Environment.GetEnvironmentVariable("HOME") ?? Environment.CurrentDirectory, "tickets.json");
+            // Use the file path from the environment variable if available.
+            string filePath = Environment.GetEnvironmentVariable("FilePath") 
+                              ?? Path.Combine(Environment.GetEnvironmentVariable("HOME") ?? Environment.CurrentDirectory, "tickets.json");
+
+            log.LogInformation($"Using file path: {filePath}");
 
             if (!File.Exists(filePath))
             {
@@ -60,5 +63,6 @@ public static class GetTicketsFunction
         }
     }
 }
+
 
 

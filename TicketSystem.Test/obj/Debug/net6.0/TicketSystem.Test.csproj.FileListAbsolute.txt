@@ -159,3 +159,4 @@ C:\Users\otm04\RiderProjects\MyFirstAzureFunction\TicketSystem.Test\obj\Debug\ne
 C:\Users\otm04\RiderProjects\MyFirstAzureFunction\TicketSystem.Test\obj\Debug\net6.0\TicketSystem.Test.pdb
 C:\Users\otm04\RiderProjects\MyFirstAzureFunction\TicketSystem.Test\obj\Debug\net6.0\TicketSystem.Test.genruntimeconfig.cache
 C:\Users\otm04\RiderProjects\MyFirstAzureFunction\TicketSystem.Test\obj\Debug\net6.0\ref\TicketSystem.Test.dll
+C:\Users\otm04\RiderProjects\MyFirstAzureFunction\TicketSystem.Test\obj\Debug\net6.0\TicketSystem.Test.sourcelink.json

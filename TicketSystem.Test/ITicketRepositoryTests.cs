@@ -157,7 +157,77 @@ namespace TicketSystem.Test
             Assert.IsFalse(resultWithEmpty);
         }
         
-       
+        [Test]
+        public async Task AddTicketAsync_ShouldNotInvoke_WhenTicketIsNull()
+        {
+            // Arrange
+            Ticket nullTicket = null;
+
+            // Act
+            await _mockRepository.Object.AddTicketAsync(nullTicket);
+
+            // Assert
+            _mockRepository.Verify(repo => repo.AddTicketAsync(It.IsAny<Ticket>()), Times.Once);
+        }
+        
+        [Test]
+        public async Task UpdateTicketAsync_ShouldNotInvoke_WhenTicketDoesNotExist()
+        {
+            // Arrange
+            var nonExistentTicket = new Ticket { TicketID = "999", Description = "Non-existent Ticket", Status = "New", Priority = "Medium" };
+
+            // Act
+            await _mockRepository.Object.UpdateTicketAsync(nonExistentTicket);
+
+            // Assert
+            _mockRepository.Verify(repo => repo.UpdateTicketAsync(It.IsAny<Ticket>()), Times.Once);
+        }
+        
+        [Test]
+        public async Task GetTicketByIdAsync_ShouldReturnNull_WhenIdIsEmpty()
+        {
+            // Arrange
+            var emptyId = string.Empty;
+            _mockRepository.Setup(repo => repo.GetTicketByIdAsync(emptyId)).ReturnsAsync((Ticket)null);
+
+            // Act
+            var result = await _mockRepository.Object.GetTicketByIdAsync(emptyId);
+
+            // Assert
+            Assert.IsNull(result);
+        }
+        
+        [Test]
+        public async Task GetAllTicketsAsync_ShouldReturnAllTickets_WhenManyExist()
+        {
+            // Arrange
+            var largeNumberOfTickets = new List<Ticket>();
+            for (int i = 0; i < 1000; i++)
+            {
+                largeNumberOfTickets.Add(new Ticket
+                {
+                    TicketID = i.ToString(),
+                    Description = $"Test Ticket {i}",
+                    Status = "Open",
+                    Priority = "Medium"
+                });
+            }
+
+            _mockRepository.Setup(repo => repo.GetAllTicketsAsync()).ReturnsAsync(largeNumberOfTickets);
+
+            // Act
+            var result = await _mockRepository.Object.GetAllTicketsAsync();
+
+            // Assert
+            Assert.IsNotNull(result);
+            Assert.AreEqual(1000, result.Count);
+            Assert.AreEqual("0", result[0].TicketID);
+            Assert.AreEqual("999", result[999].TicketID);
+        }
+
+
+
+
 
 
         

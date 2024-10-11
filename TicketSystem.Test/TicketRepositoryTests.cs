@@ -109,6 +109,17 @@ namespace TicketSystem.Test
 
             Assert.IsFalse(result);
         }
+        
+        [Test]
+        public void UpdateTicketAsync_ShouldThrowException_WhenTicketDoesNotExist()
+        {
+            var updatedTicket = new Ticket { TicketID = "999", Description = "Non-existent Ticket", Status = "Open", Priority = "High" };
+
+            var exception = Assert.ThrowsAsync<System.Exception>(async () => await _repository.UpdateTicketAsync(updatedTicket));
+
+            Assert.AreEqual("Ticket with ID: 999 not found.", exception.Message);
+        }
+
     }
 }
 

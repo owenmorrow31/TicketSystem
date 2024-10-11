@@ -1,0 +1,5 @@
+C:\Users\otm04\RiderProjects\MyFirstAzureFunction\MyFirstAzureFunction\obj\Debug\net8.0\MyFirstAzureFunction.csproj.AssemblyReference.cache
+C:\Users\otm04\RiderProjects\MyFirstAzureFunction\MyFirstAzureFunction\obj\Debug\net8.0\MyFirstAzureFunction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\otm04\RiderProjects\MyFirstAzureFunction\MyFirstAzureFunction\obj\Debug\net8.0\MyFirstAzureFunction.AssemblyInfoInputs.cache
+C:\Users\otm04\RiderProjects\MyFirstAzureFunction\MyFirstAzureFunction\obj\Debug\net8.0\MyFirstAzureFunction.AssemblyInfo.cs
+C:\Users\otm04\RiderProjects\MyFirstAzureFunction\MyFirstAzureFunction\obj\Debug\net8.0\MyFirstAzureFunction.csproj.CoreCompileInputs.cache
