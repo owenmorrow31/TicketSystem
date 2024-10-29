@@ -9,6 +9,9 @@ namespace TicketSystem.Interfaces
         Task<List<Ticket>> GetAllTicketsAsync();
         Task<Ticket> GetTicketByIdAsync(string ticketId);
         Task AddTicketAsync(Ticket ticket);
+        
+        Task UpdateTicketAsync(Ticket ticket);      
+        Task<bool> DeleteTicketAsync(string ticketId);  
         Ticket ValidateAndPrepareTicket(Ticket ticket);
     }
 }

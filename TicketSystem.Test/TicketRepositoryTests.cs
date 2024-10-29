@@ -67,7 +67,8 @@ namespace TicketSystem.Test
         [Test]
         public async Task AddTicketAsync_ShouldAddTicketAndSaveToFile()
         {
-            var newTicket = new Ticket { TicketID = "3", Description = "New Ticket", Status = "New", Priority = "Medium" };
+            var newTicket = new Ticket
+                { TicketID = "3", Description = "New Ticket", Status = "New", Priority = "Medium" };
 
             await _repository.AddTicketAsync(newTicket);
 
@@ -79,7 +80,8 @@ namespace TicketSystem.Test
         [Test]
         public async Task UpdateTicketAsync_ShouldUpdateTicketAndSaveToFile()
         {
-            var updatedTicket = new Ticket { TicketID = "1", Description = "Updated Ticket", Status = "Closed", Priority = "High" };
+            var updatedTicket = new Ticket
+                { TicketID = "1", Description = "Updated Ticket", Status = "Closed", Priority = "High" };
 
             await _repository.UpdateTicketAsync(updatedTicket);
 
@@ -109,17 +111,35 @@ namespace TicketSystem.Test
 
             Assert.IsFalse(result);
         }
-        
+
         [Test]
         public void UpdateTicketAsync_ShouldThrowException_WhenTicketDoesNotExist()
         {
-            var updatedTicket = new Ticket { TicketID = "999", Description = "Non-existent Ticket", Status = "Open", Priority = "High" };
+            var updatedTicket = new Ticket
+                { TicketID = "999", Description = "Non-existent Ticket", Status = "Open", Priority = "High" };
 
-            var exception = Assert.ThrowsAsync<System.Exception>(async () => await _repository.UpdateTicketAsync(updatedTicket));
+            var exception =
+                Assert.ThrowsAsync<System.Exception>(async () => await _repository.UpdateTicketAsync(updatedTicket));
 
             Assert.AreEqual("Ticket with ID: 999 not found.", exception.Message);
         }
 
+        [Test]
+        public void ReadTicketsFromFileAsync_ShouldThrowFileNotFoundException_WhenFileDoesNotExist()
+        {
+            // Arrange
+            if (File.Exists(_testFilePath))
+            {
+                File.Delete(_testFilePath);
+            }
+
+            // Act & Assert
+            var exception =
+                Assert.ThrowsAsync<FileNotFoundException>(async () => await _repository.GetAllTicketsAsync());
+            Assert.That(exception.Message, Does.Contain("File not found"));
+        }
+
+      
     }
 }
 

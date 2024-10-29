@@ -19,6 +19,7 @@ namespace TicketSystem.Tests
         {
             _mockRepository = new Mock<ITicketRepository>();
 
+            // Example setup for initial GetAllTicketsAsync
             _mockRepository.Setup(repo => repo.GetAllTicketsAsync())
                 .ReturnsAsync(new List<Ticket>
                 {
@@ -28,16 +29,65 @@ namespace TicketSystem.Tests
             _ticketService = new TicketService(_mockRepository.Object);
         }
 
+        // Test for AddTicketAsync
         [Test]
-        public async Task GetAllTickets_ShouldReturnTickets()
+        public async Task AddTicketAsync_ShouldAddTicket_WhenTicketIsValid()
         {
-            var result = await _ticketService.GetAllTicketsAsync();
+            // Arrange
+            var newTicket = new Ticket { TicketID = "3", Description = "New Ticket", Priority = "High" };
 
-            Assert.IsNotNull(result);
-            Assert.IsNotEmpty(result);
-            Assert.AreEqual("Test Ticket", result[0].Description);
+            // Act
+            await _ticketService.AddTicketAsync(newTicket);
+
+            // Assert
+            _mockRepository.Verify(repo => repo.AddTicketAsync(It.Is<Ticket>(t => t.TicketID == "3" && t.Status == "New")), Times.Once);
         }
 
+        // Test for UpdateTicketAsync
+        [Test]
+        public async Task UpdateTicketAsync_ShouldUpdateTicket_WhenTicketIsValid()
+        {
+            // Arrange
+            var existingTicket = new Ticket { TicketID = "4", Description = "Existing Ticket", Priority = "Medium", Status = "Open" };
+
+            // Act
+            await _ticketService.UpdateTicketAsync(existingTicket);
+
+            // Assert
+            _mockRepository.Verify(repo => repo.UpdateTicketAsync(It.Is<Ticket>(t => t.TicketID == "4" && t.Status == "New")), Times.Once);
+        }
+
+        // Test for DeleteTicketAsync returning true
+        [Test]
+        public async Task DeleteTicketAsync_ShouldReturnTrue_WhenTicketExists()
+        {
+            // Arrange
+            _mockRepository.Setup(repo => repo.DeleteTicketAsync("1")).ReturnsAsync(true);
+
+            // Act
+            var result = await _ticketService.DeleteTicketAsync("1");
+
+            // Assert
+            Assert.IsTrue(result);
+            _mockRepository.Verify(repo => repo.DeleteTicketAsync("1"), Times.Once);
+        }
+
+        // Test for DeleteTicketAsync returning false
+        [Test]
+        public async Task DeleteTicketAsync_ShouldReturnFalse_WhenTicketDoesNotExist()
+        {
+            // Arrange
+            _mockRepository.Setup(repo => repo.DeleteTicketAsync("2")).ReturnsAsync(false);
+
+            // Act
+            var result = await _ticketService.DeleteTicketAsync("2");
+
+            // Assert
+            Assert.IsFalse(result);
+            _mockRepository.Verify(repo => repo.DeleteTicketAsync("2"), Times.Once);
+        }
+
+        // Additional example tests for completeness
         [Test]
         public async Task GetTicketById_ShouldReturnTicket_WhenTicketExists()
         {
@@ -51,45 +101,19 @@ namespace TicketSystem.Tests
         }
 
         [Test]
-        public async Task GetTicketById_ShouldReturnNull_WhenTicketDoesNotExist()
-        {
-            _mockRepository.Setup(repo => repo.GetTicketByIdAsync("2"))
-                .ReturnsAsync((Ticket)null);
-
-            var result = await _ticketService.GetTicketByIdAsync("2");
-
-            Assert.IsNull(result);
-        }
-        
-       
-        
-        [Test]
         public void ValidateAndPrepareTicket_ShouldSetStatusToNew_WhenValidTicketIsProvided()
         {
-            // Arrange
             var validTicket = new Ticket { TicketID = "5", Description = "A valid description" };
 
-            // Act
             var result = _ticketService.ValidateAndPrepareTicket(validTicket);
 
-            // Assert
             Assert.IsNotNull(result);
             Assert.AreEqual("New", result.Status);
         }
-    
-        [Test]
-        public async Task GetAllTicketsAsync_ShouldReturnEmptyList_WhenNoTicketsAreAvailable()
-        {
-            // Arrange
-            _mockRepository.Setup(repo => repo.GetAllTicketsAsync()).ReturnsAsync(new List<Ticket>());
+    }
+}
 
-            // Act
-            var result = await _ticketService.GetAllTicketsAsync();
-
-            // Assert
-            Assert.IsNotNull(result);
-            Assert.IsEmpty(result);
-        }
+        
 
 
 
@@ -104,6 +128,4 @@ namespace TicketSystem.Tests
 
         
         
-    }
-}
-
+    

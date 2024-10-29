@@ -47,27 +47,6 @@
     "CreatedByUserId": "125",
     "AssignedToUserId": "458",
     "Comments": []
-  },
-  {
-    "TicketID": "3",
-    "Description": "New ticket issue",
-    "Status": "Open",
-    "Priority": "Low",
-    "DateCreated": "2024-10-09T10:00:00Z",
-    "LastUpdated": "2024-10-09T10:00:00Z",
-    "CreatedByUserId": "125",
-    "AssignedToUserId": "458",
-    "Comments": []
-  },
-  {
-    "TicketID": "3",
-    "Description": "New ticket issue",
-    "Status": "Open",
-    "Priority": "Low",
-    "DateCreated": "2024-10-09T10:00:00Z",
-    "LastUpdated": "2024-10-09T10:00:00Z",
-    "CreatedByUserId": "125",
-    "AssignedToUserId": "458",
-    "Comments": []
   }
 ]
+
