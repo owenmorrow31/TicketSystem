@@ -49,12 +49,133 @@
     "Comments": []
   },
   {
+    "TicketID": "3",
+    "Description": "New ticket issue",
+    "Status": "Open",
+    "Priority": "Low",
+    "DateCreated": "2024-11-04T19:49:17.828105Z",
+    "LastUpdated": "2024-11-04T19:49:17.828105Z",
+    "CreatedByUserId": "125",
+    "AssignedToUserId": "458",
+    "Comments": []
+  },
+  {
+    "TicketID": "2",
+    "Description": "New ticket issue",
+    "Status": "Open",
+    "Priority": "Low",
+    "DateCreated": "2024-11-04T19:49:34.9615456Z",
+    "LastUpdated": "2024-11-04T19:49:34.9615456Z",
+    "CreatedByUserId": "125",
+    "AssignedToUserId": "458",
+    "Comments": []
+  },
+  {
     "TicketID": "1",
+    "Description": "New ticket issue",
+    "Status": "Open",
+    "Priority": "Low",
+    "DateCreated": "2024-11-04T19:49:40.3736409Z",
+    "LastUpdated": "2024-11-04T19:49:40.3736409Z",
+    "CreatedByUserId": "125",
+    "AssignedToUserId": "458",
+    "Comments": []
+  },
+  {
+    "TicketID": "4",
+    "Description": "New ticket issue",
+    "Status": "Open",
+    "Priority": "Low",
+    "DateCreated": "2024-11-04T19:49:45.7790284Z",
+    "LastUpdated": "2024-11-04T19:49:45.7790285Z",
+    "CreatedByUserId": "125",
+    "AssignedToUserId": "458",
+    "Comments": []
+  },
+  {
+    "TicketID": "3001",
+    "Description": "New ticket issue",
+    "Status": "Open",
+    "Priority": "Low",
+    "DateCreated": "2024-11-04T19:49:58.4015186Z",
+    "LastUpdated": "2024-11-04T19:49:58.4015186Z",
+    "CreatedByUserId": "125",
+    "AssignedToUserId": "458",
+    "Comments": []
+  },
+  {
+    "TicketID": "3001",
+    "Description": "Anything",
+    "Status": "Open",
+    "Priority": "Low",
+    "DateCreated": "2024-11-04T19:50:25.9816291Z",
+    "LastUpdated": "2024-11-04T19:50:25.9816292Z",
+    "CreatedByUserId": "125",
+    "AssignedToUserId": "458",
+    "Comments": []
+  },
+  {
+    "TicketID": "2000",
     "Description": "Issue with the server",
     "Status": "Open",
     "Priority": "High",
-    "DateCreated": "2024-11-03T17:36:20.5651825Z",
-    "LastUpdated": "2024-11-03T17:36:20.5651827Z",
+    "DateCreated": "2024-11-04T19:51:54.1059363Z",
+    "LastUpdated": "2024-11-04T19:51:54.1059365Z",
+    "CreatedByUserId": "124",
+    "AssignedToUserId": "456",
+    "Comments": null
+  },
+  {
+    "TicketID": "3000",
+    "Description": "Issue with the server",
+    "Status": "Open",
+    "Priority": "High",
+    "DateCreated": "2024-11-04T19:53:46.4718753Z",
+    "LastUpdated": "2024-11-04T19:53:46.4718754Z",
+    "CreatedByUserId": "123",
+    "AssignedToUserId": "456",
+    "Comments": null
+  },
+  {
+    "TicketID": "4000",
+    "Description": "Issue with the server",
+    "Status": "Open",
+    "Priority": "High",
+    "DateCreated": "2024-11-04T19:54:10.4097506Z",
+    "LastUpdated": "2024-11-04T19:54:10.4097508Z",
+    "CreatedByUserId": "124",
+    "AssignedToUserId": "456",
+    "Comments": null
+  },
+  {
+    "TicketID": "1",
+    "Description": "Anything",
+    "Status": "Open",
+    "Priority": "Low",
+    "DateCreated": "2024-11-04T19:56:53.733025Z",
+    "LastUpdated": "2024-11-04T19:56:53.7330251Z",
+    "CreatedByUserId": "156",
+    "AssignedToUserId": "567",
+    "Comments": null
+  },
+  {
+    "TicketID": "600",
+    "Description": "Theres something wrong with my code",
+    "Status": "Open",
+    "Priority": "High",
+    "DateCreated": "2024-11-04T19:57:33.4600344Z",
+    "LastUpdated": "2024-11-04T19:57:33.4600345Z",
+    "CreatedByUserId": "613",
+    "AssignedToUserId": "918",
+    "Comments": null
+  },
+  {
+    "TicketID": "2000",
+    "Description": "Issue with the server",
+    "Status": "Open",
+    "Priority": "High",
+    "DateCreated": "2024-11-04T20:06:33.638891Z",
+    "LastUpdated": "2024-11-04T20:06:33.6388912Z",
     "CreatedByUserId": "123",
     "AssignedToUserId": "456",
     "Comments": null
@@ -64,10 +185,21 @@
     "Description": "Issue with the server",
     "Status": "Open",
     "Priority": "High",
-    "DateCreated": "2024-11-04T02:10:11.0891126Z",
-    "LastUpdated": "2024-11-04T02:10:11.0891127Z",
+    "DateCreated": "2024-11-04T20:08:33.2748045Z",
+    "LastUpdated": "2024-11-04T20:08:33.2748046Z",
     "CreatedByUserId": "123",
     "AssignedToUserId": "456",
+    "Comments": null
+  },
+  {
+    "TicketID": "2000",
+    "Description": "Issue with the server",
+    "Status": "open",
+    "Priority": "Low",
+    "DateCreated": "2024-11-04T20:09:03.061765Z",
+    "LastUpdated": "2024-11-04T20:09:03.0617651Z",
+    "CreatedByUserId": "67",
+    "AssignedToUserId": "98",
     "Comments": null
   },
   {
@@ -75,8 +207,228 @@
     "Description": "Issue with the server",
     "Status": "Open",
     "Priority": "High",
-    "DateCreated": "2024-11-04T02:21:20.9072689Z",
-    "LastUpdated": "2024-11-04T02:21:20.9072691Z",
+    "DateCreated": "2024-11-04T20:12:44.0273628Z",
+    "LastUpdated": "2024-11-04T20:12:44.0273629Z",
+    "CreatedByUserId": "123",
+    "AssignedToUserId": "456",
+    "Comments": null
+  },
+  {
+    "TicketID": "4000",
+    "Description": "I have a problem",
+    "Status": "In Progress",
+    "Priority": "Low",
+    "DateCreated": "2024-11-04T20:15:15.9107384Z",
+    "LastUpdated": "2024-11-04T20:15:15.9107386Z",
+    "CreatedByUserId": "65",
+    "AssignedToUserId": "13",
+    "Comments": null
+  },
+  {
+    "TicketID": "1",
+    "Description": "Issue with the server",
+    "Status": "Open",
+    "Priority": "High",
+    "DateCreated": "2024-11-04T20:36:38.556747Z",
+    "LastUpdated": "2024-11-04T20:36:38.5567471Z",
+    "CreatedByUserId": "123",
+    "AssignedToUserId": "456",
+    "Comments": null
+  },
+  {
+    "TicketID": "2000",
+    "Description": "wewww",
+    "Status": "Open",
+    "Priority": "low",
+    "DateCreated": "2024-11-04T20:37:06.3014214Z",
+    "LastUpdated": "2024-11-04T20:37:06.3014216Z",
+    "CreatedByUserId": "124",
+    "AssignedToUserId": "156",
+    "Comments": null
+  },
+  {
+    "TicketID": "2000",
+    "Description": "Issue with the server",
+    "Status": "Open",
+    "Priority": "High",
+    "DateCreated": "2024-11-04T20:38:31.3110189Z",
+    "LastUpdated": "2024-11-04T20:38:31.3110189Z",
+    "CreatedByUserId": "124",
+    "AssignedToUserId": "456",
+    "Comments": [
+      {
+        "CommentID": "1730752709574",
+        "TicketID": null,
+        "UserID": "1",
+        "CommentText": "I worked with user",
+        "DateCreated": "2024-11-04T20:38:29.574Z"
+      }
+    ]
+  },
+  {
+    "TicketID": "2000",
+    "Description": "Issue with the server",
+    "Status": "Open",
+    "Priority": "High",
+    "DateCreated": "2024-11-04T20:51:33.0924846Z",
+    "LastUpdated": "2024-11-04T20:51:33.092485Z",
+    "CreatedByUserId": "123",
+    "AssignedToUserId": "456",
+    "Comments": [
+      {
+        "CommentID": "1730752725438",
+        "TicketID": null,
+        "UserID": "1",
+        "CommentText": "U worke",
+        "DateCreated": "2024-11-04T20:38:45.438Z"
+      },
+      {
+        "CommentID": "1730752754774",
+        "TicketID": null,
+        "UserID": "1",
+        "CommentText": "dddd",
+        "DateCreated": "2024-11-04T20:39:14.774Z"
+      },
+      {
+        "CommentID": "1730752765433",
+        "TicketID": null,
+        "UserID": "124",
+        "CommentText": "ddddd",
+        "DateCreated": "2024-11-04T20:39:25.433Z"
+      },
+      {
+        "CommentID": "1730753053636",
+        "TicketID": null,
+        "UserID": "790",
+        "CommentText": "ssss",
+        "DateCreated": "2024-11-04T20:44:13.636Z"
+      },
+      {
+        "CommentID": "1730753214635",
+        "TicketID": null,
+        "UserID": "23",
+        "CommentText": "ssss",
+        "DateCreated": "2024-11-04T20:46:54.635Z"
+      },
+      {
+        "CommentID": "1730753245290",
+        "TicketID": null,
+        "UserID": "45",
+        "CommentText": "ccccc",
+        "DateCreated": "2024-11-04T20:47:25.29Z"
+      },
+      {
+        "CommentID": "1730753490096",
+        "TicketID": null,
+        "UserID": "1",
+        "CommentText": "w",
+        "DateCreated": "2024-11-04T20:51:30.096Z"
+      }
+    ]
+  },
+  {
+    "TicketID": "1",
+    "Description": "Issue with the server",
+    "Status": "Open",
+    "Priority": "High",
+    "DateCreated": "2024-11-04T20:52:56.746848Z",
+    "LastUpdated": "2024-11-04T20:52:56.7468481Z",
+    "CreatedByUserId": "123",
+    "AssignedToUserId": "456",
+    "Comments": [
+      {
+        "CommentID": "1730753501782",
+        "TicketID": null,
+        "UserID": "1",
+        "CommentText": "11111",
+        "DateCreated": "2024-11-04T20:51:41.782Z"
+      }
+    ]
+  },
+  {
+    "TicketID": "78",
+    "Description": "I have an issue",
+    "Status": "Open",
+    "Priority": "low",
+    "DateCreated": "2024-11-04T21:37:46.2880061Z",
+    "LastUpdated": "2024-11-04T21:37:46.2880063Z",
+    "CreatedByUserId": "123",
+    "AssignedToUserId": "456",
+    "Comments": []
+  },
+  {
+    "TicketID": "2000",
+    "Description": "dddd",
+    "Status": "Open",
+    "Priority": "low",
+    "DateCreated": "2024-11-04T21:44:39.0043426Z",
+    "LastUpdated": "2024-11-04T21:44:39.0043427Z",
+    "CreatedByUserId": "124",
+    "AssignedToUserId": "123",
+    "Comments": []
+  },
+  {
+    "TicketID": "78",
+    "Description": "ssss",
+    "Status": "Open",
+    "Priority": "low",
+    "DateCreated": "2024-11-04T22:15:42.1098494Z",
+    "LastUpdated": "2024-11-04T22:15:42.1098495Z",
+    "CreatedByUserId": "56",
+    "AssignedToUserId": "87",
+    "Comments": []
+  },
+  {
+    "TicketID": "98",
+    "Description": "dddd",
+    "Status": "Open",
+    "Priority": "low",
+    "DateCreated": "2024-11-04T22:16:37.2524237Z",
+    "LastUpdated": "2024-11-04T22:16:37.2524238Z",
+    "CreatedByUserId": "123",
+    "AssignedToUserId": "123",
+    "Comments": []
+  },
+  {
+    "TicketID": "1",
+    "Description": "Issue with the server",
+    "Status": "Open",
+    "Priority": "High",
+    "DateCreated": "2024-11-04T22:30:55.0394329Z",
+    "LastUpdated": "2024-11-04T22:30:55.0394331Z",
+    "CreatedByUserId": "124",
+    "AssignedToUserId": "456",
+    "Comments": null
+  },
+  {
+    "TicketID": "3000",
+    "Description": "I have a problem",
+    "Status": "Open",
+    "Priority": "High",
+    "DateCreated": "2024-11-04T22:31:40.1700636Z",
+    "LastUpdated": "2024-11-04T22:31:40.1700638Z",
+    "CreatedByUserId": "678",
+    "AssignedToUserId": "98",
+    "Comments": null
+  },
+  {
+    "TicketID": "5000",
+    "Description": "Issue with the server",
+    "Status": "Open",
+    "Priority": "low",
+    "DateCreated": "2024-11-04T22:34:57.9160832Z",
+    "LastUpdated": "2024-11-04T22:34:57.9160833Z",
+    "CreatedByUserId": "45",
+    "AssignedToUserId": "98",
+    "Comments": null
+  },
+  {
+    "TicketID": "1",
+    "Description": "Issue with the server",
+    "Status": "Open",
+    "Priority": "High",
+    "DateCreated": "2024-11-04T22:36:32.9380228Z",
+    "LastUpdated": "2024-11-04T22:36:32.9380229Z",
     "CreatedByUserId": "123",
     "AssignedToUserId": "456",
     "Comments": null
