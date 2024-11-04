@@ -43,6 +43,10 @@ public static class PostTicketFunction
             return new BadRequestObjectResult("Invalid ticket data provided.");
         }
 
+        // Set the DateCreated and LastUpdated fields
+        ticket.DateCreated = DateTime.UtcNow;
+        ticket.LastUpdated = DateTime.UtcNow;
+
         // Get the file path from environment variables or use a default path.
         string filePath = Environment.GetEnvironmentVariable("FilePath") 
                           ?? Path.Combine(Environment.CurrentDirectory, "tickets.json");
@@ -63,4 +67,5 @@ public static class PostTicketFunction
         return new OkObjectResult($"Ticket added successfully: {ticket.TicketID}");
     }
 }
+
 

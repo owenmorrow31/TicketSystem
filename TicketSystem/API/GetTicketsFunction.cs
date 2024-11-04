@@ -36,19 +36,27 @@ public static class GetTicketsFunction
             string jsonData = await File.ReadAllTextAsync(filePath);
             var tickets = JsonConvert.DeserializeObject<List<Ticket>>(jsonData) ?? new List<Ticket>();
 
+            log.LogInformation($"Total tickets loaded: {tickets.Count}");
+
             if (!string.IsNullOrEmpty(ticketId))
             {
+                log.LogInformation($"Searching for ticket with ID: {ticketId}");
+                
+                // Find the ticket with the matching ID
                 var ticket = tickets.Find(t => t.TicketID == ticketId);
                 if (ticket != null)
                 {
+                    log.LogInformation($"Found ticket: {JsonConvert.SerializeObject(ticket)}");
                     return new OkObjectResult(ticket);
                 }
                 else
                 {
+                    log.LogWarning($"Ticket with ID: {ticketId} not found.");
                     return new NotFoundObjectResult($"Ticket with ID: {ticketId} not found.");
                 }
             }
 
+            log.LogInformation("Returning all tickets.");
             return new OkObjectResult(tickets);
         }
         catch (JsonException ex)
@@ -63,6 +71,5 @@ public static class GetTicketsFunction
         }
     }
 }
-
 
 

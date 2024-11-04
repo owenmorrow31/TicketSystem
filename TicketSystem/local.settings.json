@@ -4,6 +4,9 @@
     "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet",
     "FilePath": "C:\\Users\\otm04\\RiderProjects\\MyFirstAzureFunction\\TicketSystem\\tickets.json"
+  },
+  "Host": {
+    "CORS": "*"
   }
 }
 
